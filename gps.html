@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <span>
+            
+        </span>
+    </body>
+    <script type="text/javascript">
+        function atualizar_texto(gps) {
+            area = document.getElementsByTagName('span')[0]
+            area.innerText = gps.coords.latitude + ' ' + gps.coords.longitude
+        }
+        navigator.geolocation.watchPosition(atualizar_texto)
+    </script>
+</html>
