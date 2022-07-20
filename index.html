@@ -1,13 +1,16 @@
 <html>
     <body>
-        <span>
-            
-        </span>
+        Latitude: <span id="latitude"></span></br>
+        Longitude: <span id="longitude"></span></br>
+        Altitude: <span id="altitude"></span></br>
+        Speed: <span id="speed"></span></br>
     </body>
     <script type="text/javascript">
         function atualizar_texto(gps) {
-            area = document.getElementsByTagName('span')[0]
-            area.innerText = gps.coords.latitude + ' ' + gps.coords.longitude
+            latitude = document.getElementById('latitude')
+            latitude.innerText = gps.coords.latitude
+            longitude = document.getElementById('longitude')
+            longitude.innerText = gps.coords.longitude
         }
         navigator.geolocation.watchPosition(atualizar_texto)
     </script>
