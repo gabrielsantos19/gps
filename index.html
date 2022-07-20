@@ -3,6 +3,8 @@
         Latitude: <span id="latitude"></span></br>
         Longitude: <span id="longitude"></span></br>
         Altitude: <span id="altitude"></span></br>
+        Accuracy: <span id="accuracy"></span></br>
+        A_Accuracy: <span id="a_accuracy"></span></br>
         Speed: <span id="speed"></span></br>
     </body>
     <script type="text/javascript">
@@ -11,6 +13,14 @@
             latitude.innerText = gps.coords.latitude
             longitude = document.getElementById('longitude')
             longitude.innerText = gps.coords.longitude
+            altitude = document.getElementById('altitude')
+            altitude.innerText = gps.coords.altitude
+            accuracy = document.getElementById('accuracy')
+            accuracy.innerText = gps.coords.accuracy
+            altitudeAccuracy = document.getElementById('altitudeAccuracy')
+            altitudeAccuracy.innerText = gps.coords.altitudeAccuracy
+            speed = document.getElementById('speed')
+            speed.innerText = gps.coords.speed
         }
         navigator.geolocation.watchPosition(atualizar_texto)
     </script>
