@@ -33,17 +33,17 @@
   <script type="text/javascript">
     function atualizar_texto(gps) {
       latitude = document.getElementById('latitude')
-      latitude.innerText = gps.coords.latitude
       longitude = document.getElementById('longitude')
-      longitude.innerText = gps.coords.longitude
       altitude = document.getElementById('altitude')
-      altitude.innerText = gps.coords.altitude
       accuracy = document.getElementById('accuracy')
-      accuracy.innerText = gps.coords.accuracy
       altitudeAccuracy = document.getElementById('altitudeAccuracy')
-      altitudeAccuracy.innerText = gps.coords.altitudeAccuracy
       speed = document.getElementById('speed')
-      speed.innerText = gps.coords.speed
+      latitude.innerText = gps.coords.latitude.toFixed(4)
+      longitude.innerText = gps.coords.longitude.toFixed(4)
+      altitude.innerText = gps.coords.altitude.toFixed(4)
+      accuracy.innerText = gps.coords.accuracy.toFixed(4)
+      altitudeAccuracy.innerText = gps.coords.altitudeAccuracy.toFixed(4)
+      speed.innerText = gps.coords.speed.toFixed(4)
     }
     navigator.geolocation.watchPosition(atualizar_texto)
   </script>
