@@ -1,42 +1,50 @@
 <html>
-    <head></head>
-    <body>
-        Latitude: <span id="latitude"></span></br>
-        Longitude: <span id="longitude"></span></br>
-        Altitude: <span id="altitude"></span></br>
-        Accuracy: <span id="accuracy"></span></br>
-        A_Accuracy: <span id="a_accuracy"></span></br>
-        Speed: <span id="speed"></span></br>
+  <head>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <main>
         <div>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2834924259072436"
-                 crossorigin="anonymous"></script>
-            <!-- Teste 1 -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2834924259072436"
-                 data-ad-slot="2207516855"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <span>Latitude:</span>
+            <span id="latitude"></span>
         </div>
-    </body>
-    <script type="text/javascript">
-        function atualizar_texto(gps) {
-            latitude = document.getElementById('latitude')
-            latitude.innerText = gps.coords.latitude
-            longitude = document.getElementById('longitude')
-            longitude.innerText = gps.coords.longitude
-            altitude = document.getElementById('altitude')
-            altitude.innerText = gps.coords.altitude
-            accuracy = document.getElementById('accuracy')
-            accuracy.innerText = gps.coords.accuracy
-            altitudeAccuracy = document.getElementById('altitudeAccuracy')
-            altitudeAccuracy.innerText = gps.coords.altitudeAccuracy
-            speed = document.getElementById('speed')
-            speed.innerText = gps.coords.speed
-        }
-        navigator.geolocation.watchPosition(atualizar_texto)
-    </script>
+        <div>
+            <span>Longitude:</span>
+            <span id="longitude"></span>
+        </div>
+        <div>
+            <span>Altitude:</span>
+            <span id="altitude"></span>
+        </div>
+        <div>
+            <span>Accuracy:</span>
+            <span id="accuracy"></span>
+        </div>
+        <div>
+            <span>A_Accuracy:</span>
+            <span id="a_accuracy"></span>
+        </div>
+        <div>
+            <span>Speed:</span>
+            <span id="speed"></span>
+        </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    function atualizar_texto(gps) {
+      latitude = document.getElementById('latitude')
+      latitude.innerText = gps.coords.latitude
+      longitude = document.getElementById('longitude')
+      longitude.innerText = gps.coords.longitude
+      altitude = document.getElementById('altitude')
+      altitude.innerText = gps.coords.altitude
+      accuracy = document.getElementById('accuracy')
+      accuracy.innerText = gps.coords.accuracy
+      altitudeAccuracy = document.getElementById('altitudeAccuracy')
+      altitudeAccuracy.innerText = gps.coords.altitudeAccuracy
+      speed = document.getElementById('speed')
+      speed.innerText = gps.coords.speed
+    }
+    navigator.geolocation.watchPosition(atualizar_texto)
+  </script>
 </html>
